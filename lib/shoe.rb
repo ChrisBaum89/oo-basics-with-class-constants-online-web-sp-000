@@ -6,7 +6,12 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
+    unique_brand = do BRANDS.any? |x|
+      x == brand
+    end
+    if brand.none |x|
+        x == brands
+      BRANDS << brand
   end
 
   def cobble
